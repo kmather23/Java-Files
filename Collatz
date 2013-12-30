@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class Collatz
+{
+	public static void main( String[] args )
+	{
+		Scanner keyboard = new Scanner(System.in);
+		int response;
+		int counter = 0;
+		int highest;
+
+		System.out.println("Starting number:");
+		response = keyboard.nextInt();
+		highest = response;
+
+		while (response != 1)
+		{
+			if (response % 2 == 0) 
+				{
+				response = response / 2;
+				}
+			else 
+			{
+				response = (3 * response) + 1;
+			}
+			if (highest < response) 
+			{
+				highest = response;
+			}
+			counter++;
+			System.out.println(response + "    ");
+		}
+
+		System.out.println("Terminated after " + counter + " steps. The largest value was " + highest);
+	}
+}
