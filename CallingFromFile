@@ -1,0 +1,67 @@
+import java.util.Scanner;
+
+
+public class CallingFromFile
+{
+	public static void main( String[] args )
+	{
+		Scanner keyboard = new Scanner(System.in);
+		int response;
+		int triangle_base;
+		int triangle_height;
+		int rectangle_length;
+		int rectangle_height;
+		int square_side;
+		int circle_raduis;
+
+		System.out.println("Shape Area Calculator" );
+		System.out.println("1) Triangle \n 2) Rectangle \n 3) Square \n 4) Circle \n 5) Quit" );
+		response = keyboard.nextInt();
+
+		while (response != 5) 
+		{
+			switch (response) 
+			{	//case 1: triangle
+				case 1: System.out.println("Base:" );
+						triangle_base = keyboard.nextInt();
+						System.out.println("Height:" );
+						triangle_height = keyboard.nextInt();
+						System.out.println("The area is " + AreaCalculator.area_triangle(triangle_base, triangle_height) );
+						System.out.println("~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-" );
+						System.out.println("\n1) Triangle \n 2) Rectangle \n 3) Square \n 4) Circle \n 5) Quit" );
+						response = keyboard.nextInt();
+				break;
+
+				//case 2: Rectangle
+				case 2: System.out.println("Length:" );
+						rectangle_length = keyboard.nextInt();
+						System.out.println("Height:" );
+						rectangle_height = keyboard.nextInt();
+						System.out.println("The area is " + AreaCalculator.area_rectangle(rectangle_length, rectangle_height) );
+						System.out.println("~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-" );
+						System.out.println("\n1) Triangle \n 2) Rectangle \n 3) Square \n 4) Circle \n 5) Quit" );
+						response = keyboard.nextInt();
+				break;
+
+				//case 3: Square
+				case 3: System.out.println("Side:" );
+						square_side = keyboard.nextInt();
+						System.out.println("The area is " + AreaCalculator.area_square(square_side) );
+						System.out.println("~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-" );
+						System.out.println("\n1) Triangle \n 2) Rectangle \n 3) Square \n 4) Circle \n 5) Quit" );
+						response = keyboard.nextInt();
+				break;
+
+				//case 4: Circle
+				case 4: System.out.println("Radius:" );
+						circle_raduis = keyboard.nextInt();
+						System.out.println("The area is " + AreaCalculator.area_circle(circle_raduis) );
+						System.out.println("~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-" );
+						System.out.println("\n1) Triangle \n 2) Rectangle \n 3) Square \n 4) Circle \n 5) Quit" );
+						response = keyboard.nextInt();
+
+				break;
+			}
+		}		
+	}
+}
