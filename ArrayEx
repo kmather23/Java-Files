@@ -1,0 +1,12 @@
+public class ArrayEx
+{
+	public static void main( String[] args )
+	{
+		ArrayList<object> list = new ArrayList<object>();
+		list.add(1, object1);
+		list.add(3, object3);
+		list.add(2, object2);
+		System.out.println(list);
+
+	}
+}
