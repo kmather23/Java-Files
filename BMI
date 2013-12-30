@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class BMI
+{
+    public static void main( String[] args )
+    {
+        Scanner keyboard = new Scanner(System.in);
+
+        double height_feet;
+        double height_inches;
+        double weight;
+        double BMI;
+
+        System.out.print( "Your height (feet only) : " );
+        height_feet = keyboard.nextDouble();
+
+        System.out.print( " Your height (inches) : " );
+        height_inches = keyboard.nextDouble();
+
+        System.out.print( "Your weight in pounds: " );
+        weight = keyboard.nextDouble();
+
+        BMI = (weight * 0.453592) / (Math.pow((((height_feet * 12) + height_inches) * 0.0254),2));
+        System.out.print("\nYour BMI is " + BMI );
+
+        if (BMI < 18.5 )
+        {
+        System.out.print( "\nBMI Category: underweight" );            
+        }
+
+        else if (BMI < 25 )
+        {
+        System.out.print( "\nBMI Category: normal weight" );            
+        }
+
+        else if (BMI < 29 )
+        {
+        System.out.print( "\nBMI Category: overweight" );            
+        }
+
+        else 
+        {
+        System.out.print( "\nBMI Category: obese" );            
+        }
+    }
+}
